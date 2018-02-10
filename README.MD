@@ -1,8 +1,15 @@
 # Team 6 Assignment 1
 (Words about the project)
 
-## Language
-Python
+## Environment
+Language: Python 3
+
+Test Framework: Python's default unittest.
+
+Installing teamcity-messages through pip is optional, and is only used for the CI server.
+
+## Continuous Integration
+This repository uses Project Pokémon's Team City server for continuous integrations. Contact Evan Dixon to request an account.
 
 ## Contributing
 1. Checkout the source
