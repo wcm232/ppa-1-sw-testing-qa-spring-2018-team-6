@@ -1,4 +1,7 @@
 import unittest
+import sys
+sys.path.append("..")
+
 import bmi
 
 class TestBmi(unittest.TestCase):
