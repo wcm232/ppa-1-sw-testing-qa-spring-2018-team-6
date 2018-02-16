@@ -9,7 +9,7 @@ Test Framework: Python's default unittest.
 Code coverage: coverage.py (`pip install coverage`)
 
 ## Continuous Integration
-This repository uses Project Pokémon's Team City server for continuous integrations. Contact Evan Dixon to request an account.
+This repository uses Project Pokï¿½mon's Team City server for continuous integrations. Contact Evan Dixon to request an account.
 
 Build definitions:
 * [Compile](https://teamcity.projectpokemon.org/viewType.html?buildTypeId=EvandixonPrivate_Team6Assignment1_Compile) - Compiles all python files to ensure valid syntax.
@@ -39,10 +39,4 @@ To generate a code coverage report, run one of the above commands with code cove
 ## Creating tests
 Refer to [Python documentation](https://docs.python.org/3.6/library/unittest.html) for details, but keep the following in mind:
 * Test files should be placed in /project/tests
-* Test files must end with the following:
-
-```
-if __name__ == "__main__":
-	from startBuildRunner import *
-	unittest.main(testRunner=getUnitTestRunner())
-```
+* Test files do not need any footer

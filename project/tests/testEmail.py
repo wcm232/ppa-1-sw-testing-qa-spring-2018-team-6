@@ -174,9 +174,4 @@ class EmailTests(unittest.TestCase):
 
 	def test_cannot_contain_back_tick(self):
 		self.assertFalse(emailVerifier.verifyEmail("test`test@example.com"))
-
-
-# Run the tests
-if __name__ == "__main__":
-	import startBuildRunner
-	unittest.main(testRunner=startBuildRunner.getUnitTestRunner())
+		
