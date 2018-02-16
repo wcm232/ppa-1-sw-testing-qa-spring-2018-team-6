@@ -80,31 +80,31 @@ class EmailTests(unittest.TestCase):
 	def test_reject_starting_with_zero(self):
 		self.assertFalse(emailVerifier.verifyEmail("0test@example.com"))
 
-	def test_reject_starting_with_zero(self):
+	def test_reject_starting_with_one(self):
 		self.assertFalse(emailVerifier.verifyEmail("1test@example.com"))
 
-	def test_reject_starting_with_zero(self):
+	def test_reject_starting_with_two(self):
 		self.assertFalse(emailVerifier.verifyEmail("2test@example.com"))
 
-	def test_reject_starting_with_zero(self):
+	def test_reject_starting_with_three(self):
 		self.assertFalse(emailVerifier.verifyEmail("3test@example.com"))
 
-	def test_reject_starting_with_zero(self):
+	def test_reject_starting_with_four(self):
 		self.assertFalse(emailVerifier.verifyEmail("4test@example.com"))
 
-	def test_reject_starting_with_zero(self):
+	def test_reject_starting_with_five(self):
 		self.assertFalse(emailVerifier.verifyEmail("5test@example.com"))
 
-	def test_reject_starting_with_zero(self):
+	def test_reject_starting_with_six(self):
 		self.assertFalse(emailVerifier.verifyEmail("6test@example.com"))
 
-	def test_reject_starting_with_zero(self):
+	def test_reject_starting_with_seven(self):
 		self.assertFalse(emailVerifier.verifyEmail("7test@example.com"))
 
-	def test_reject_starting_with_zero(self):
+	def test_reject_starting_with_eight(self):
 		self.assertFalse(emailVerifier.verifyEmail("8test@example.com"))
 
-	def test_reject_starting_with_zero(self):
+	def test_reject_starting_with_nine(self):
 		self.assertFalse(emailVerifier.verifyEmail("9test@example.com"))
 
 	# Left of @ can contain !$%*+-=?^_{|}~
