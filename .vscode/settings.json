@@ -1,0 +1,10 @@
+{
+    "python.unitTest.unittestArgs": [
+        "-v",
+        "-s",
+        "./project/tests",
+        "-p",
+        "test*.py"
+    ],
+    "python.unitTest.unittestEnabled": true
+}

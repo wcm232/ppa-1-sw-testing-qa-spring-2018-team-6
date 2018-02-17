@@ -4,3 +4,4 @@
 
 /.vs
 /project/tests/__pycache__
+/project/__pycache__
