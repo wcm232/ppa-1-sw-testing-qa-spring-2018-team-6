@@ -1,15 +1,18 @@
 # Team 6 Assignment 1
-(Words about the project)
 
 ## Environment
-Language: Python 3
 
-Test Framework: Python's default unittest.
+Language: Python 3.6
 
-Code coverage: coverage.py (`pip install coverage`)
+Test Framework: unittest.
+
+Code coverage: coverage.py
+
+OS: Windows 10 or Debian 8 or 9. Other operating systems will likely work, but only these have been tested when writing this readme.
 
 ## Continuous Integration
-This repository uses Project Pok�mon's Team City server for continuous integrations. Contact Evan Dixon to request an account.
+
+This repository uses Project Pokémon's Team City server for continuous integrations. Contact Evan Dixon to request an account.
 
 Build definitions:
 * [Compile](https://teamcity.projectpokemon.org/viewType.html?buildTypeId=EvandixonPrivate_Team6Assignment1_Compile) - Compiles all python files to ensure valid syntax.
@@ -18,6 +21,7 @@ Build definitions:
 Use `pip install teamcity-messages` to enable Team City service messages when running tests, for use with Running Tests below.
 
 ## Contributing
+
 1. Checkout the source
 2. Create a branch
 3. Make changes
@@ -27,16 +31,57 @@ Use `pip install teamcity-messages` to enable Team City service messages when ru
 7. Merge the Pull Request
 8. Repeat
 
-## Running Tests
-With the working directory set to /project/tests:
-* For local machines, run `python -m unittest`.
-* For Team City, run `python -m teamcity.unittestpy`.
-* For local machines with code coverage, run `coverage run -m unittest`.
-* For Team City with code coverage, run `coverage run -m teamcity.unittestpy`.
-
-To generate a code coverage report, run one of the above commands with code coverage, then run `coverage html`
-
 ## Creating tests
+
 Refer to [Python documentation](https://docs.python.org/3.6/library/unittest.html) for details, but keep the following in mind:
 * Test files should be placed in /project/tests
 * Test files do not need any footer
+
+## Setup
+
+### Windows
+
+1. Install [Python 3.6](https://www.python.org/downloads/). Ensure python is in PATH.
+2. Optional: To enable code coverage, run the following command: `pip install coverage`
+3. Optional: For Team City build agents, run the following command: `pip install teamcity-messages`
+
+### Debian
+
+1. Run the following command: `sudo apt-get install python3`
+2. Optional: To enable code coverage, run the following command: `pip3 install coverage`
+3. Optional: For Team City build agents, run the following command: `pip3 install teamcity-messages`
+
+## Running the application
+
+### Windows
+
+Run `python main.py` in /project
+
+### Debian
+
+Run `python3 main.py` in /project
+
+## Running Tests
+
+Code coverage reporting is optional, as Team City is configured to generate a report for every push.
+
+### Without code coverage
+
+For Windows:
+
+1. Set the working directory to / or /project/tests, relative to the repository directory
+2. Run `python -m unittest`.
+    * For Team City build agents, run `python -m teamcity.unittestpy`.
+
+For Debian:
+
+1. Set the working directory to / or /project/tests, relative to the repository directory
+2. Run `python3 -m unittest`.
+    * For Team City build agents, run `python3 -m teamcity.unittestpy`.
+
+### With code coverage
+
+1. Set the working directory to / or /project/tests, relative to the repository directory
+2. Run `coverage run -m unittest`.
+    * For Team City build agents, run `coverage run -m teamcity.unittestpy`.
+3. Run `coverage html`
