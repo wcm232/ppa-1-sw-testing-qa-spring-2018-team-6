@@ -54,6 +54,9 @@ class EmailTests(unittest.TestCase):
 	def test_allow_letters(self):
 		self.assertTrue(emailVerifier.verifyEmail("abcdefghijklmnopqrstuvwxyz@example.com"))
 
+	def test_allow_capital_letters(self):
+		self.assertTrue(emailVerifier.verifyEmail("ABCDEFGHIJKLMNOPQRSTUVWXYZ@example.com"))
+
 	def test_allow_numbers(self):
 		self.assertTrue(emailVerifier.verifyEmail("test0123456789@example.com"))
 

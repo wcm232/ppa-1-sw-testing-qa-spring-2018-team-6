@@ -18,4 +18,4 @@ def verifyEmail(strEmailAddress):
     if ".@" in strEmailAddress:        
         return False
 
-    return re.match("""^[a-z\!\$\%\*\+\-\=\?\^\_\{\|\}\~]([a-z0-9\!\$\%\*\+\-\=\?\^\_\{\|\}\~]|\.)*\@([a-z0-9]|\.)+$""", strEmailAddress) is not None
+    return re.match("""^[a-zA-Z\!\$\%\*\+\-\=\?\^\_\{\|\}\~]([a-zA-Z0-9\!\$\%\*\+\-\=\?\^\_\{\|\}\~]|\.)*\@([a-zA-Z0-9]|\.)+$""", strEmailAddress) is not None
