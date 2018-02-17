@@ -1,3 +1,4 @@
+import fixModuleDiscovery
 import unittest
 import distance_calc
 
