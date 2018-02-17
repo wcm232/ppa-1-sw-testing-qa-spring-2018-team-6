@@ -5,8 +5,4 @@ class TestFrameworkTests(unittest.TestCase):
 	# Test names must begin with "test_"
 	def test_true(self):
 		self.assertTrue(True)
-
-# Run the tests
-if __name__ == "__main__":
-	from startBuildRunner import *
-	unittest.main(testRunner=getUnitTestRunner())
+		
