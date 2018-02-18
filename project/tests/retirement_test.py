@@ -6,6 +6,9 @@ class retirementTesting(unittest.TestCase):
     def test_age_string(self):
         self.assertFalse(retirement('30', 100000.0, 35.0, 50000))
 
+    def test_age_float(self):
+        self.assertFalse(retirement(30.0, 100000.0, 35.0, 50000))
+
     def test_age_out_of_range_below(self):
         self.assertFalse(retirement(10, 100000.0,35.0,50000))
 
