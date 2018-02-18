@@ -38,13 +38,3 @@ def retirement(age, salary, saved, goal):
 
 if __name__ == '__main__':
     unittest.main()
-
-#The main function of the program
-#print("Welcome to retirement plan calculator!")
-#print("Please enter you current age, annual salary, how much you save per year, and your desired retirement savings goal.")
-#age = int(input("Current Age: "))
-#salary = float(input("Annual Salary: "))
-#saved = float(input("Save Percentage(enter without a percent sign): "))
-#goal = int(input("Retirement Goal: "))
-#retirement(age, salary, saved, goal)
-#print("Thank you for your service!")
