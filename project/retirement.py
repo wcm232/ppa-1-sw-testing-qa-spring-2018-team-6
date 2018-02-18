@@ -1,4 +1,4 @@
-def retirementGoal(age, salary, saved, goal):
+def findRetirementAge(age, salary, saved, goal):
     if type(age) is not int:
         return False
     if type(salary) is not float:
@@ -22,10 +22,11 @@ def retirementGoal(age, salary, saved, goal):
     saved = saved / 100
     savedAmount = salary * saved
     total = savedAmount
-    while (100-age) > 0:
+    currentAge = age
+    while (100-currentAge) > 0:
         employerMatch = total + (total * 0.35)
         if employerMatch >= goal:
-           return age
+           return currentAge
         total += savedAmount
-        age += 1
-    return age
+        currentAge += 1
+    return currentAge

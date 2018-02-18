@@ -66,11 +66,37 @@ def distance():
 
 def retire():
     """Determine retirement savings and goal"""
-    age = int(input("Please enter your age: "))
-    salary = float(input("Please enter your yearly salary: "))
-    saved = float(input("Please enter the amount you wish to save without decimal or percent sign (Ex 35 == 35%): "))
-    goal = int(input("Please enter your desired goal: "))
-    result = retirement.retirementGoal(age, salary, saved, goal)
+    valid = True
+
+    try:
+        age = int(input("Please enter your age: "))
+    except:
+        valid = False
+    if valid == False:
+        print("Please enter an integer.")
+
+    try:
+        salary = float(input("Please enter your yearly salary: "))
+    except:
+        valid = False
+    if valid == False:
+        print("Please enter an integer.")
+
+    try:
+        saved = float(input("Please enter the amount you wish to save without decimal or percent sign (Ex 35 == 35%): "))
+    except:
+        valid = False
+    if valid == False:
+        print("Please enter an integer.")
+
+    try:
+        goal = int(input("Please enter your desired goal: "))
+    except:
+        valid = False
+    if valid == False:
+        print("Please enter an integer.")
+
+    result = retirement.findRetirementAge(age, salary, saved, goal)
     if result >= 100:
         print("Sorry, your savings goal will not be met.")
     else:
