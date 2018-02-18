@@ -24,7 +24,6 @@ def retirement(age, salary, saved, goal):
         return False
     saved = saved / 100
     savedAmount = salary * saved
-    employerMatch = savedAmount * 0.35
     total = savedAmount
     while (100-age) > 0:
         total1 = total + (total * 0.35)
