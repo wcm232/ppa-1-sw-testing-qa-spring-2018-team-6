@@ -1,5 +1,6 @@
 import emailVerifier
 import distance_calc
+import retirement
 
 exitRequested = False
 
@@ -62,9 +63,21 @@ def distance():
     else:
         print("The distance between the two coordinates is: " + "{0:.3f}".format(distance) + " units.")
     print()
-    
+
+def retire():
+    """Determine retirement savings and goal"""
+    age = int(input("Please enter your age: "))
+    salary = float(input("Please enter your yearly salary: "))
+    saved = float(input("Please enter the amount you wish to save without decimal or percent sign (Ex 35 == 35%): "))
+    goal = int(input("Please enter your desired goal: "))
+    retirement.retirement(age, salary, saved, goal)
+    #if result >= 100:
+        
+    #else:
+        
     
 menu = {
+2: retire,
 3: distance,
 4: email,
 0: requestExit
