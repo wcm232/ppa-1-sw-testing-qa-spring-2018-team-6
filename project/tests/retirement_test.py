@@ -21,6 +21,18 @@ class retirementTesting(unittest.TestCase):
     def test_salary_below(self):
         self.assertFalse(retirement(30, -3, 35.0, 50000))
 
+    def test_saved_string(self):
+        self.assertFalse(retirement(30, 100000.0, '35.0', 50000))
+
+    def test_saved_int(self):
+        self.assertFalse(retirement(30, 100000.0, 35, 50000))
+
+    def test_goal_string(self):
+        self.assertFalse(retirement(30, 100000.0, 35.0, '50000'))
+
+    def test_goal_float(self):
+        self.assertFalse(retirement(30, 100000.0, 35.0, 50000.0))
+
     def test_goal_reach1(self):
         self.assertTrue(retirement(30, 100000.0, 35.0, 50000))
 
