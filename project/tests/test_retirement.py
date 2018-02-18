@@ -52,7 +52,7 @@ class retirementTesting(unittest.TestCase):
         self.assertEqual(retirement.findRetirementAge(30, 100000.0, 35.0, 50000), 31)
 
     def test_goal_reach2(self):
-        self.assertEqual(retirement.findRetirementAge(22, 100000.0, 50.0, 200000), 23)
+        self.assertEqual(retirement.findRetirementAge(22, 100000.0, 50.0, 200000), 24)
 
     def test_goal_below(self):
         self.assertFalse(retirement.findRetirementAge(30, 100000.0, 35.0, -3))
