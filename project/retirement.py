@@ -1,4 +1,4 @@
-def retirement(age, salary, saved, goal):
+def retirementGoal(age, salary, saved, goal):
     if type(age) is not int:
         return False
     if type(salary) is not float:
@@ -25,9 +25,7 @@ def retirement(age, salary, saved, goal):
     while (100-age) > 0:
         employerMatch = total + (total * 0.35)
         if employerMatch >= goal:
-            print("Your savings goal will be met at: ", age)
-            return True
+           return age
         total += savedAmount
         age += 1
-    print("Sorry, your savings goal will not be met.")
-    return False
+    return age
