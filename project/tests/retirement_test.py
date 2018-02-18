@@ -43,4 +43,5 @@ class retirementTesting(unittest.TestCase):
         self.assertTrue(retirement(22, 80000.0, 15.0, 1000000)) 
 
 if __name__ == '__main__':
-    unittest.main()
+    from startBuildRunner import *
+    unittest.main(testRunner=getUnitTestRunner())
