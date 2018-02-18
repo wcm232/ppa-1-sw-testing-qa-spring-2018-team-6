@@ -71,11 +71,7 @@ def retire():
     saved = float(input("Please enter the amount you wish to save without decimal or percent sign (Ex 35 == 35%): "))
     goal = int(input("Please enter your desired goal: "))
     retirement.retirement(age, salary, saved, goal)
-    #if result >= 100:
-        
-    #else:
-        
-    
+
 menu = {
 2: retire,
 3: distance,
