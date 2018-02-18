@@ -1,6 +1,6 @@
 import fixModuleDiscovery
 import unittest
-from retirement import retirement
+import retirement
 
 class retirementTesting(unittest.TestCase):
     def test_age_string(self):
@@ -56,6 +56,3 @@ class retirementTesting(unittest.TestCase):
 
     def test_goal_below(self):
         self.assertFalse(retirement(30, 100000.0, 35.0, -3))
-
-if __name__ == '__main__':
-    unittest.main()
