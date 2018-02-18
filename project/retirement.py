@@ -1,4 +1,3 @@
-import unittest
 def retirement(age, salary, saved, goal):
     if type(age) is not int:
         return False
@@ -24,8 +23,8 @@ def retirement(age, salary, saved, goal):
     savedAmount = salary * saved
     total = savedAmount
     while (100-age) > 0:
-        total1 = total + (total * 0.35)
-        if total1 >= goal:
+        employerMatch = total + (total * 0.35)
+        if employerMatch >= goal:
             return True
         total += savedAmount
         age += 1
