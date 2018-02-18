@@ -66,35 +66,30 @@ def distance():
 
 def retire():
     """Determine retirement savings and goal"""
-    valid = True
 
-    try:
-        age = int(input("Please enter your age: "))
-    except:
-        valid = False
-    if valid == False:
-        print("Please enter an integer.")
+    ageString = input("Please enter your age: ")
+    while not ageString.isnumeric():
+        print("Please enter your age as an integer")
+        ageString = input("Enter an integer: ")
+    age = int(ageString)
 
-    try:
-        salary = float(input("Please enter your yearly salary: "))
-    except:
-        valid = False
-    if valid == False:
-        print("Please enter an integer.")
+    salaryString = input("Please enter your salary: ")
+    while not salaryString.isnumeric():
+        print("Please enter your salary as an integer")
+        ageString = input("Enter an integer: ")
+    salary = float(salaryString)
 
-    try:
-        saved = float(input("Please enter the amount you wish to save without decimal or percent sign (Ex 35 == 35%): "))
-    except:
-        valid = False
-    if valid == False:
-        print("Please enter an integer.")
+    savedString = input("Please enter how much you wish to save annually (Ex: 35 = 35%): ")
+    while not savedString.isnumeric():
+        print("Please enter your annual saving rate as an integer")
+        savedString = input("Enter an integer: ")
+    saved = float(savedString)
 
-    try:
-        goal = int(input("Please enter your desired goal: "))
-    except:
-        valid = False
-    if valid == False:
-        print("Please enter an integer.")
+    goalString = input("Please enter your goal: ")
+    while not goalString.isnumeric():
+        print("Please enter your goal as an integer")
+        goalString = input("Enter an integer: ")
+    goal = int(goalString)
 
     result = retirement.findRetirementAge(age, salary, saved, goal)
     if result >= 100:
