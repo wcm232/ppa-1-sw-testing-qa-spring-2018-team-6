@@ -19,7 +19,7 @@ class retirementTesting(unittest.TestCase):
         self.assertFalse(retirement.retirementGoal(100, 100000.0, 35.0, 100000))
 
     def test_age_out_of_range(self):
-        self.assertFalse(retirement.retirementGoal(95, 100000.0, 1.0, 100000))
+        self.assertEqual(retirement.retirementGoal(95, 100000.0, 1.0, 100000), 100)
 
     def test_salary_int(self):
         self.assertFalse(retirement.retirementGoal(30, 100000, 35.0, 50000))
