@@ -1,5 +1,6 @@
 import emailVerifier
 import distance_calc
+import retirement
 
 exitRequested = False
 
@@ -62,9 +63,42 @@ def distance():
     else:
         print("The distance between the two coordinates is: " + "{0:.3f}".format(distance) + " units.")
     print()
-    
-    
+
+def retire():
+    """Determine retirement savings and goal"""
+
+    ageString = input("Please enter your age: ")
+    while not ageString.isnumeric():
+        print("Please enter your age as an integer")
+        ageString = input("Enter an integer: ")
+    age = int(ageString)
+
+    salaryString = input("Please enter your salary: ")
+    while not salaryString.isnumeric():
+        print("Please enter your salary as an integer")
+        ageString = input("Enter an integer: ")
+    salary = float(salaryString)
+
+    savedString = input("Please enter how much you wish to save annually (Ex: 35 = 35%): ")
+    while not savedString.isnumeric():
+        print("Please enter your annual saving rate as an integer")
+        savedString = input("Enter an integer: ")
+    saved = float(savedString)
+
+    goalString = input("Please enter your goal: ")
+    while not goalString.isnumeric():
+        print("Please enter your goal as an integer")
+        goalString = input("Enter an integer: ")
+    goal = int(goalString)
+
+    result = retirement.findRetirementAge(age, salary, saved, goal)
+    if result >= 100:
+        print("Sorry, your savings goal will not be met.")
+    else:
+         print("Your savings goal will be met at: ", result)
+
 menu = {
+2: retire,
 3: distance,
 4: email,
 0: requestExit
