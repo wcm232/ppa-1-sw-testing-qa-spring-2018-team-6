@@ -15,7 +15,7 @@ def tip_calc(cost, num_people):
         total_cost = math.ceil(total_cost*100) / 100
         per_person = round(per_person, 2)
         per = []
-        for x in range (0, num_people-1):
+        for x in range (0, num_people):
             if(x == num_people-1):
                 temp = per_person + .01
                 temp = round(temp, 2)
