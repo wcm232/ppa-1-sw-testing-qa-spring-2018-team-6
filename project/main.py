@@ -1,6 +1,6 @@
 import emailVerifier
 import distance_calc
-
+import bmi
 exitRequested = False
 
 # To add new menu items:
@@ -15,6 +15,20 @@ def requestExit():
     print("Exiting...")
     print("")
 
+def bmiCalculator():
+    """Calculate a body mass index given height and weight"""
+    feet = raw_input("Enter Height (whole feet value only): ")
+    inches = raw_input("Enter Inches Above Highest Foot: ")
+    weight = raw_input("Enter Weight (lbs): ")
+    try:
+        feet = int(feet)
+        inches = int(inches)
+        weight = float(weight)
+        print(bmi.calcBmi(feet, inches, weight))
+    except ValueError:
+        print("ERROR: Invalid Input")
+    
+    
 def email():
     """Verify an email address"""
     email = input("Please enter the email address you wish to verify: ")
@@ -67,7 +81,8 @@ def distance():
 menu = {
 3: distance,
 4: email,
-0: requestExit
+0: requestExit,
+1: bmiCalculator
 }
 
 def displayMenu():
@@ -77,7 +92,7 @@ def displayMenu():
 def getMenuItemNumber():
     option = input("Please choose a menu option, then press enter: ")
 
-    while not option.isnumeric():
+    while not type(option) is int:
         print("Invalid input. Please make sure you type a number.")
         print("")
         displayMenu()
