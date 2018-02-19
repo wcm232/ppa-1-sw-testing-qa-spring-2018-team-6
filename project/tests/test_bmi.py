@@ -22,7 +22,7 @@ class TestBmi(unittest.TestCase):
         result = bmi.calcBmi(5,3,160)
         self.assertEqual(result, "28.3 Overweight")
 
-   def test_worksWithProperInputIntegerRoundsToTenthsNormal(self):
+    def test_worksWithProperInputIntegerRoundsToTenthsNormal(self):
         result = bmi.calcBmi(5,10,165)
         self.assertEqual(result, "23.7 Normal")
 
