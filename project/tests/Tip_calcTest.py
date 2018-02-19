@@ -2,12 +2,15 @@ import sys
 import unittest
 sys.path.append("..")
 import tip_calc
+import math
 
 class TestTip(unittest.TestCase):
-      def test_input_type(self):
-            self.assertRaises(TypeError, tip_calc("100",3))
-      def test_true_type(self):
-            self.assertTrue(tip_calc.tip_calc(100,3))
+      def test_evenTip(self):
+            temp = [57.5, 57.5]
+            self.assertSequenceEqual(tip_calc.tip_calc(100,2), temp)
+      def test_unevenTip(self):
+            temp = [38.33, 38.33, 38.34]
+            self.assertSequenceEqual(tip_calc.tip_calc(100,3), temp)
       
             
 
