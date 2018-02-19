@@ -1,6 +1,7 @@
 import emailVerifier
 import distance_calc
 import retirement
+import tip_calc
 
 exitRequested = False
 
@@ -97,10 +98,30 @@ def retire():
     else:
          print("Your savings goal will be met at: ", result)
 
+def tip():
+    "Split a tip"
+    subtotalString = input("Please enter your sub-total: ")
+    while not subtotalString.isnumeric():
+        print("Please enter your subtotal as a decimal number")
+        subtotalString = input("Enter a decimal number: ")
+    subtotal = float(subtotalString)
+
+    partySizeString = input("Please enter the number of people that are paying: ")
+    while not partySizeString.isnumeric():
+        print("Please the number of people that are paying as an integer")
+        partySizeString = input("Enter an integer: ")
+    partySize = int(partySizeString)
+
+    dues = tip_calc.calculateTip(subtotal, partySize)
+
+    for i in range(0, len(dues)):
+        print("Guest " + str(i+1) + " must pay $" + str(round(dues[i], 2)))
+
 menu = {
 2: retire,
 3: distance,
 4: email,
+5: tip,
 0: requestExit
 }
 
