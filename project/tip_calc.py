@@ -1,5 +1,3 @@
-import math
-
 def calculateTip(sub_total, num_people):
     if type(sub_total) is not int and type(sub_total) is not float:
         raise TypeError()
