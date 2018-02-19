@@ -90,7 +90,7 @@ class TestBmi(unittest.TestCase):
         result = bmi.calcBmi(5, 10, 1950)
         self.assertEqual(result, "ERROR: Invalid Input")
 
-    def test_heavierThanTwiceTheHeaviestPersonEver(self):
+    def test_heavierThanTwiceTheHeaviestPersonEverDup(self):
         result = bmi.calcBmi(5, 10, 2000)
         self.assertEqual(result, "ERROR: Invalid Input")
 
