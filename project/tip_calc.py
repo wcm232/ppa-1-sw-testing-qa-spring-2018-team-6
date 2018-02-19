@@ -19,7 +19,7 @@ def tip_calc(cost, num_people):
             if(x == num_people-1):
                 temp = per_person + .01
                 temp = round(temp, 2)
-                per.append(temp+ .01)
+                per.append(temp)
             else:
                 per.append(per_person)
 
