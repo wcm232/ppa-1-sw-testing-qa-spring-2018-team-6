@@ -69,7 +69,7 @@ def checkForErrors(feet, inches, weight):
     
 def calcBmi(feet, inches, weight):
     error = checkForErrors(feet, inches, weight)
-    if(error == 1):
+    if(error == True):
         return errorMsg()
     else:
         heightInches = (feet * 12) + inches
