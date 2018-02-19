@@ -3,6 +3,10 @@ import distance_calc
 import retirement
 import tip_calc
 import bmi
+import re
+
+def isDecimalString(strToCheck):
+	return re.match("^[0-9]+(\.[0-9]+)?$", strToCheck) is not None
 
 exitRequested = False
 
@@ -115,7 +119,7 @@ def retire():
 def tip():
     "Split a tip"
     subtotalString = input("Please enter your sub-total: ")
-    while not subtotalString.isnumeric():
+    while not isDecimalString(subtotalString):
         print("Please enter your subtotal as a decimal number")
         subtotalString = input("Enter a decimal number: ")
     subtotal = float(subtotalString)
