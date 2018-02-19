@@ -10,7 +10,7 @@ class TestTip(unittest.TestCase):
       def test_require_number_arg2(self):
             for badInput in ["10", True, TestTip()]:
                   with self.assertRaises(TypeError):                        
-                        tip_calc.calculateTip(badInput, 1)
+                        tip_calc.calculateTip(1, badInput)
       def test_fail_zero_way_split(self):
             with self.assertRaises(ValueError):                        
                   tip_calc.calculateTip(1, 0)
