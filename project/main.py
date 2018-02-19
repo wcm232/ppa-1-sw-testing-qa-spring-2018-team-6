@@ -19,9 +19,9 @@ def requestExit():
 
 def bmiCalculator():
     """Calculate a body mass index given height and weight"""
-    feet = raw_input("Enter Height (whole feet value only): ")
-    inches = raw_input("Enter Inches Above Highest Foot: ")
-    weight = raw_input("Enter Weight (lbs): ")
+    feet = input("Enter Height (whole feet value only): ")
+    inches = input("Enter Inches Above Highest Foot: ")
+    weight = input("Enter Weight (lbs): ")
     try:
         feet = int(feet)
         inches = int(inches)
