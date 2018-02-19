@@ -24,8 +24,8 @@ class TestTip(unittest.TestCase):
             self.assertEqual([0.69, 0.69], tip_calc.calculateTip(1.2, 2))
             self.assertEqual([2.99, 2.99], tip_calc.calculateTip(5.2, 2))
       def test_three_way_uneven_split(self):
-            self.assertEqual([0.30, 0.31, 0.31], tip_calc.calculateTip(0.8, 3))
-            self.assertEqual([5.82, 5.83, 5.83], tip_calc.calculateTip(15.2, 3))
+            self.assertEqual([0.31, 0.31, 0.30], tip_calc.calculateTip(0.8, 3))
+            self.assertEqual([5.83, 5.83, 5.82], tip_calc.calculateTip(15.2, 3))
 
       def test_five_way_uneven_split(self):            
             self.assertEqual([3.48, 3.47, 3.47, 3.47, 3.47], tip_calc.calculateTip(15.1, 5))

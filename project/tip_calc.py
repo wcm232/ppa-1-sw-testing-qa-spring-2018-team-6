@@ -21,13 +21,16 @@ def calculateTip(sub_total, num_people):
     
     remainderIncrement = 0
     unassigned_amount = round(unassigned_amount, 2)
+    remainderAssignmentRange = range(0, 0)
     if unassigned_amount > 0:
         remainderIncrement = 0.01
+        remainderAssignmentRange = range(0, num_people)
     elif unassigned_amount < 0:
         remainderIncrement = -0.01
+        remainderAssignmentRange = range(num_people - 1, 0, -1)
 
     if remainderIncrement != 0:        
-        for p in range(0, num_people):
+        for p in remainderAssignmentRange:
             unassigned_amount -= remainderIncrement
             dues[p] = round(dues[p] + remainderIncrement, 2)            
             if round(unassigned_amount, 2) == 0:
