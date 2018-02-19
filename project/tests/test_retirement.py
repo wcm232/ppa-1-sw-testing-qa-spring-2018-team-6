@@ -28,7 +28,7 @@ class retirementTesting(unittest.TestCase):
         self.assertFalse(retirement.findRetirementAge(30, '100000.0', 35.0, 50000))
 
     def test_salary_below(self):
-        self.assertFalse(retirement.findRetirementAge(30, -3, 35.0, 50000))
+        self.assertFalse(retirement.findRetirementAge(30, -3.0, 35.0, 50000))
 
     def test_saved_string(self):
         self.assertFalse(retirement.findRetirementAge(30, 100000.0, '35.0', 50000))
