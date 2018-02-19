@@ -7,7 +7,7 @@ def tip_calc(cost, num_people):
     split_num = str(per_person).split('.')
     if(len(split_num[1]) <= 2):
         per = [per_person]
-        for x in range(0, num_people):
+        for x in range(0, num_people-1):
             per.append(per_person)
         return per
     else:
@@ -15,7 +15,7 @@ def tip_calc(cost, num_people):
         total_cost = math.ceil(total_cost*100) / 100
         per_person = round(per_person, 2)
         per = []
-        for x in range (0, num_people):
+        for x in range (0, num_people-1):
             if(x == num_people-1):
                 temp = round(per_person,2)
                 per.append(temp+ .01)
