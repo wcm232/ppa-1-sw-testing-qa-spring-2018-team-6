@@ -1,78 +1,71 @@
-import types
-
 def errorMsg():
     return "ERROR: Invalid Input"
 
 def tooManyInches(inches):
     if(inches > 12):
-        return 1
+        return True
     else:
-        return 0
+        return False
 
 def notEnoughInches(inches):
     if(inches < 0):
-        return 1
+        return True
     else:
-        return 0
+        return False
     
 def tooLight(weight):
     if(weight <= 0.03125):
-        return 1
+        return True
     else:
-        return 0
+        return False
 
 def tooHeavy(weight):
     if(weight >= 1950):
-        return 1
+        return True
     else:
-        return 0
+        return False
 
 def tooShort(feet, inches):
     if(feet*12+inches <= 10):
-        return 1
+        return True
     else:
-        return 0
+        return False
 
 def tooTall(feet, inches):
     if(feet*12+inches >= 214):
-        return 1
+        return True
     else:
-        return 0
+        return False
 
 def checkForRangeErrors(feet, inches, weight):
     if(tooTall(feet, inches)):
-        return 1
+        return True
     elif(tooShort(feet, inches)):
-        return 1
+        return True
     elif(tooHeavy(weight)):
-        return 1
+        return True
     elif(tooLight(weight)):
-        return 1
+        return True
     elif(notEnoughInches(inches)):
-        return 1
+        return True
     elif(tooManyInches(inches)):
-        return 1
+        return True
     else:
-        return 0
+        return False
 
 def checkForTypeErrors(feet, inches, weight):
-    if((isinstance(feet, types.IntType) and (str(feet) != "True" and str(feet) != "False"))
-        and
-        (isinstance(inches, types.IntType) and (str(inches) != "True" and str(inches) != "False"))
-       and 
-        ((isinstance(weight, types.IntType) or isinstance(weight, types.FloatType)) and
-         (str(weight) != "True" and str(weight) != "False"))):
-        return 0
+    if(type(feet) is int and type(inches) is int and (type(weight) is int or type(weight) is float)):
+        return False
     else:
-        return 1
+        return True
 
 def checkForErrors(feet, inches, weight):
     if(checkForTypeErrors(feet, inches, weight)):
-        return 1
+        return True
     elif(checkForRangeErrors(feet, inches, weight)):
-        return 1
+        return True
     else:
-        return 0
+        return False
     
 def calcBmi(feet, inches, weight):
     error = checkForErrors(feet, inches, weight)
