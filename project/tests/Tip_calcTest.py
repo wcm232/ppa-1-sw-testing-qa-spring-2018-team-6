@@ -10,7 +10,7 @@ class TestTip(unittest.TestCase):
             self.assertSequenceEqual(tip_calc.tip_calc(100,2), temp)
       def test_unevenTip(self):
             temp = [38.33, 38.33, 38.34]
-            self.assertSequenceEqual(tip_calc.tip_calc(100,4), temp)
+            self.assertSequenceEqual(tip_calc.tip_calc(100,3), temp)
       
             
 
