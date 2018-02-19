@@ -1,6 +1,7 @@
 import emailVerifier
 import distance_calc
 import retirement
+import bmi
 
 exitRequested = False
 
@@ -15,6 +16,19 @@ def requestExit():
     exitRequested = True
     print("Exiting...")
     print("")
+
+def bmiCalculator():
+    """Calculate a body mass index given height and weight"""
+    feet = input("Enter Height (whole feet value only): ")
+    inches = input("Enter Inches Above Highest Foot: ")
+    weight = input("Enter Weight (lbs): ")
+    try:
+        feet = int(feet)
+        inches = int(inches)
+        weight = float(weight)
+        print(bmi.calcBmi(feet, inches, weight))
+    except ValueError:
+        print("ERROR: Invalid Input")
 
 def email():
     """Verify an email address"""
@@ -101,7 +115,8 @@ menu = {
 2: retire,
 3: distance,
 4: email,
-0: requestExit
+0: requestExit,
+1: bmiCalculator
 }
 
 def displayMenu():
