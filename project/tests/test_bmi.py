@@ -5,7 +5,24 @@ sys.path.append("..")
 import bmi
 
 class TestBmi(unittest.TestCase):
-    def test_worksWithProperInputIntegerRoundsToTenthsNormal(self):
+
+    def test_worksWithProperInputFloatRoundsToTenthOverweight(self):
+        result = bmi.calcBmi(6,2,215.0)
+        self.assertEqual(result, "27.6 Overweight")
+
+    def test_worksWithProperInputFloatRoundsToTenthsOverweightDup(self):
+        result = bmi.calcBmi(5,3,160.0)
+        self.assertEqual(result, "28.3 Overweight")
+
+    def test_worksWithProperInputIntegerRoundsToTenthOverweight(self):
+        result = bmi.calcBmi(6,2,215)
+        self.assertEqual(result, "27.6 Overweight")
+
+    def test_worksWithProperInputIntegerRoundsToTenthsOverweightDup(self):
+        result = bmi.calcBmi(5,3,160)
+        self.assertEqual(result, "28.3 Overweight")
+
+   def test_worksWithProperInputIntegerRoundsToTenthsNormal(self):
         result = bmi.calcBmi(5,10,165)
         self.assertEqual(result, "23.7 Normal")
 
