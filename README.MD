@@ -55,7 +55,7 @@ Refer to [Python documentation](https://docs.python.org/3.6/library/unittest.htm
 
 ## Running the API (Debian only)
 
-1. Run startup.sh to start
+1. Run startup.sh to start. Alternatively use startup.py if there's problems with startup.sh not exiting.
 2. Run shutdown.sh to stop
 
 ## Running the console
