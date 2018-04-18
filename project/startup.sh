@@ -10,6 +10,6 @@ else
   echo -n "" > $pidFile
   cd ${basePath}
   echo "Starting Ditto"
-  python3 main.py host &
+  python3 startup.py &
   echo -n "$! " >> $pidFile
 fi
