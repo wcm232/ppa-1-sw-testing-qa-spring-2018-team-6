@@ -1,2 +1,2 @@
 import subprocess
-subprocess.Popen(["startup.sh"])
+subprocess.Popen(["./startup.sh"])
