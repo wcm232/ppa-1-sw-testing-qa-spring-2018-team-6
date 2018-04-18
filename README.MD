@@ -8,7 +8,9 @@ Test Framework: unittest.
 
 Code coverage: coverage.py
 
-OS: Windows 10 or Debian 8 or 9. Other operating systems will likely work, but only these have been tested when writing this readme.
+OS (for console): Windows 10 or Debian 8 or 9. Other operating systems will likely work, but only these have been tested when writing this readme.
+
+OS (for web API): Debian 9. Other Linux-based OS's may work, but are not supported.
 
 ## Continuous Integration
 
@@ -51,15 +53,20 @@ Refer to [Python documentation](https://docs.python.org/3.6/library/unittest.htm
 2. Optional: To enable code coverage, run the following command: `pip3 install coverage`
 3. Optional: For Team City build agents, run the following command: `pip3 install teamcity-messages`
 
-## Running the application
+## Running the API (Debian only)
+
+1. Run startup.sh to start. Alternatively use startup.py if there's problems with startup.sh not exiting.
+2. Run shutdown.sh to stop
+
+## Running the console
 
 ### Windows
 
-Run `python main.py` in /project
+Run `python main.py console` in /project
 
 ### Debian
 
-Run `python3 main.py` in /project
+Run `python3 main.py console` in /project
 
 ## Running Tests
 
