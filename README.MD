@@ -51,15 +51,25 @@ Refer to [Python documentation](https://docs.python.org/3.6/library/unittest.htm
 2. Optional: To enable code coverage, run the following command: `pip3 install coverage`
 3. Optional: For Team City build agents, run the following command: `pip3 install teamcity-messages`
 
-## Running the application
+## Running the API
 
 ### Windows
 
-Run `python main.py` in /project
+Run `python main.py host` in /project
 
 ### Debian
 
-Run `python3 main.py` in /project
+Run `python3 main.py host` in /project
+
+## Running the console
+
+### Windows
+
+Run `python main.py console` in /project
+
+### Debian
+
+Run `python3 main.py console` in /project
 
 ## Running Tests
 
