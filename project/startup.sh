@@ -9,7 +9,7 @@ then
 else
   echo -n "" > $pidFile
   cd ${basePath}
-  echo "Starting Ditto"
+  echo "Starting..."
   python3 main.py host &
   echo -n "$! " >> $pidFile
 fi
