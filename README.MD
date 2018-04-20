@@ -12,6 +12,10 @@ OS (for console): Windows 10 or Debian 8 or 9. Other operating systems will like
 
 OS (for web API): Debian 9. Other Linux-based OS's may work, but are not supported.
 
+Required PIP packages:
+* flask
+* flask-api
+
 ## Continuous Integration
 
 This repository uses Project Pokémon's Team City server for continuous integrations. Contact Evan Dixon to request an account.
@@ -92,3 +96,30 @@ For Debian:
 2. Run `coverage run -m unittest`.
     * For Team City build agents, run `coverage run -m teamcity.unittestpy`.
 3. Run `coverage html`
+
+## API Methods
+* GET /
+* GET /bmi
+** Parameters
+*** feet (int)
+*** inches (int)
+*** weight (float)
+* GET /retire
+** Parameters
+*** age (int)
+*** salary (float)
+*** saved (float)
+*** goal (int)
+* GET /retire
+** Parameters
+*** x1 (float)
+*** y1 (float)
+*** x2 (float)
+*** y2 (float)
+* GET /email
+** Parameters
+*** email (string)
+* GET /tip
+** Parameters
+*** subtotal (float)
+*** partySize (int)
