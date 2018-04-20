@@ -100,26 +100,26 @@ For Debian:
 ## API Methods
 * GET /
 * GET /bmi
-** Parameters
-*** feet (int)
-*** inches (int)
-*** weight (float)
+  * Parameters
+    * feet (int)
+    * inches (int)
+    * weight (float)
 * GET /retire
-** Parameters
-*** age (int)
-*** salary (float)
-*** saved (float)
-*** goal (int)
+  * Parameters
+    * age (int)
+    * salary (float)
+    * saved (float)
+    * goal (int)
 * GET /retire
-** Parameters
-*** x1 (float)
-*** y1 (float)
-*** x2 (float)
-*** y2 (float)
+  * Parameters
+    * x1 (float)
+    * y1 (float)
+    * x2 (float)
+    * y2 (float)
 * GET /email
-** Parameters
-*** email (string)
+  * Parameters
+    * email (string)
 * GET /tip
-** Parameters
-*** subtotal (float)
-*** partySize (int)
+  * Parameters
+    * subtotal (float)
+    * partySize (int)
