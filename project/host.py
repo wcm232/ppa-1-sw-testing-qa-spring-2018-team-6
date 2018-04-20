@@ -10,7 +10,7 @@ import bmi
 app = Flask(__name__)
 @app.route('/')
 def index():
-    return "Hello, World!"
+    return "Team 6 API"
 
 @app.route('/bmi')
 def bmiCalculator():
